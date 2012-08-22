@@ -13,6 +13,12 @@
 		25526CF815E5790400FC1206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25526CF615E5790400FC1206 /* InfoPlist.strings */; };
 		25526CFA15E5790400FC1206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526CF915E5790400FC1206 /* main.m */; };
 		25526CFE15E5790400FC1206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526CFD15E5790400FC1206 /* AppDelegate.m */; };
+		25526D0515E579A300FC1206 /* corgi.png in Resources */ = {isa = PBXBuildFile; fileRef = 25526D0415E579A300FC1206 /* corgi.png */; };
+		25526D0815E583CE00FC1206 /* CorgiRunView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526D0715E583CE00FC1206 /* CorgiRunView.m */; };
+		25526D0C15E5840F00FC1206 /* CorgiRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526D0A15E5840F00FC1206 /* CorgiRunViewController.m */; };
+		25526D0D15E5840F00FC1206 /* CorgiRunViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25526D0B15E5840F00FC1206 /* CorgiRunViewController.xib */; };
+		25526D1315E5869500FC1206 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526D1215E5869500FC1206 /* QuartzCore.framework */; };
+		25526D1615E586F200FC1206 /* Corgi.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526D1515E586F200FC1206 /* Corgi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,15 @@
 		25526CFB15E5790400FC1206 /* CorgiRun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorgiRun-Prefix.pch"; sourceTree = "<group>"; };
 		25526CFC15E5790400FC1206 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25526CFD15E5790400FC1206 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		25526D0415E579A300FC1206 /* corgi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corgi.png; sourceTree = "<group>"; };
+		25526D0615E583CE00FC1206 /* CorgiRunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorgiRunView.h; sourceTree = "<group>"; };
+		25526D0715E583CE00FC1206 /* CorgiRunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorgiRunView.m; sourceTree = "<group>"; };
+		25526D0915E5840F00FC1206 /* CorgiRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorgiRunViewController.h; sourceTree = "<group>"; };
+		25526D0A15E5840F00FC1206 /* CorgiRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorgiRunViewController.m; sourceTree = "<group>"; };
+		25526D0B15E5840F00FC1206 /* CorgiRunViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CorgiRunViewController.xib; sourceTree = "<group>"; };
+		25526D1215E5869500FC1206 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		25526D1415E586F200FC1206 /* Corgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Corgi.h; sourceTree = "<group>"; };
+		25526D1515E586F200FC1206 /* Corgi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Corgi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25526D1315E5869500FC1206 /* QuartzCore.framework in Frameworks */,
 				25526CEE15E5790400FC1206 /* UIKit.framework in Frameworks */,
 				25526CF015E5790400FC1206 /* Foundation.framework in Frameworks */,
 				25526CF215E5790400FC1206 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +78,7 @@
 		25526CEC15E5790400FC1206 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25526D1215E5869500FC1206 /* QuartzCore.framework */,
 				25526CED15E5790400FC1206 /* UIKit.framework */,
 				25526CEF15E5790400FC1206 /* Foundation.framework */,
 				25526CF115E5790400FC1206 /* CoreGraphics.framework */,
@@ -72,6 +89,14 @@
 		25526CF315E5790400FC1206 /* CorgiRun */ = {
 			isa = PBXGroup;
 			children = (
+				25526D0415E579A300FC1206 /* corgi.png */,
+				25526D0615E583CE00FC1206 /* CorgiRunView.h */,
+				25526D0715E583CE00FC1206 /* CorgiRunView.m */,
+				25526D1415E586F200FC1206 /* Corgi.h */,
+				25526D1515E586F200FC1206 /* Corgi.m */,
+				25526D0915E5840F00FC1206 /* CorgiRunViewController.h */,
+				25526D0A15E5840F00FC1206 /* CorgiRunViewController.m */,
+				25526D0B15E5840F00FC1206 /* CorgiRunViewController.xib */,
 				25526CFC15E5790400FC1206 /* AppDelegate.h */,
 				25526CFD15E5790400FC1206 /* AppDelegate.m */,
 				25526CF415E5790400FC1206 /* Supporting Files */,
@@ -142,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				25526CF815E5790400FC1206 /* InfoPlist.strings in Resources */,
+				25526D0515E579A300FC1206 /* corgi.png in Resources */,
+				25526D0D15E5840F00FC1206 /* CorgiRunViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +181,9 @@
 			files = (
 				25526CFA15E5790400FC1206 /* main.m in Sources */,
 				25526CFE15E5790400FC1206 /* AppDelegate.m in Sources */,
+				25526D0815E583CE00FC1206 /* CorgiRunView.m in Sources */,
+				25526D0C15E5840F00FC1206 /* CorgiRunViewController.m in Sources */,
+				25526D1615E586F200FC1206 /* Corgi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
