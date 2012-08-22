@@ -19,6 +19,7 @@
 		25526D0D15E5840F00FC1206 /* CorgiRunViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25526D0B15E5840F00FC1206 /* CorgiRunViewController.xib */; };
 		25526D1315E5869500FC1206 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526D1215E5869500FC1206 /* QuartzCore.framework */; };
 		25526D1615E586F200FC1206 /* Corgi.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526D1515E586F200FC1206 /* Corgi.m */; };
+		25526D1815E597E600FC1206 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1715E597E600FC1206 /* grass.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		25526D1215E5869500FC1206 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		25526D1415E586F200FC1206 /* Corgi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Corgi.h; sourceTree = "<group>"; };
 		25526D1515E586F200FC1206 /* Corgi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Corgi.m; sourceTree = "<group>"; };
+		25526D1715E597E600FC1206 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		25526CF315E5790400FC1206 /* CorgiRun */ = {
 			isa = PBXGroup;
 			children = (
+				25526D1715E597E600FC1206 /* grass.jpg */,
 				25526D0415E579A300FC1206 /* corgi.png */,
 				25526D0615E583CE00FC1206 /* CorgiRunView.h */,
 				25526D0715E583CE00FC1206 /* CorgiRunView.m */,
@@ -169,6 +172,7 @@
 				25526CF815E5790400FC1206 /* InfoPlist.strings in Resources */,
 				25526D0515E579A300FC1206 /* corgi.png in Resources */,
 				25526D0D15E5840F00FC1206 /* CorgiRunViewController.xib in Resources */,
+				25526D1815E597E600FC1206 /* grass.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
