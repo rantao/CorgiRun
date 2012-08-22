@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25526CEE15E5790400FC1206 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526CED15E5790400FC1206 /* UIKit.framework */; };
+		25526CF015E5790400FC1206 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526CEF15E5790400FC1206 /* Foundation.framework */; };
+		25526CF215E5790400FC1206 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526CF115E5790400FC1206 /* CoreGraphics.framework */; };
+		25526CF815E5790400FC1206 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25526CF615E5790400FC1206 /* InfoPlist.strings */; };
+		25526CFA15E5790400FC1206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526CF915E5790400FC1206 /* main.m */; };
+		25526CFE15E5790400FC1206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25526CFD15E5790400FC1206 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25526CE915E5790400FC1206 /* CorgiRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorgiRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25526CED15E5790400FC1206 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		25526CEF15E5790400FC1206 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		25526CF115E5790400FC1206 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		25526CF515E5790400FC1206 /* CorgiRun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CorgiRun-Info.plist"; sourceTree = "<group>"; };
+		25526CF715E5790400FC1206 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		25526CF915E5790400FC1206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25526CFB15E5790400FC1206 /* CorgiRun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CorgiRun-Prefix.pch"; sourceTree = "<group>"; };
+		25526CFC15E5790400FC1206 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		25526CFD15E5790400FC1206 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25526CE615E5790400FC1206 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25526CEE15E5790400FC1206 /* UIKit.framework in Frameworks */,
+				25526CF015E5790400FC1206 /* Foundation.framework in Frameworks */,
+				25526CF215E5790400FC1206 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25526CDE15E5790400FC1206 = {
+			isa = PBXGroup;
+			children = (
+				25526CF315E5790400FC1206 /* CorgiRun */,
+				25526CEC15E5790400FC1206 /* Frameworks */,
+				25526CEA15E5790400FC1206 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		25526CEA15E5790400FC1206 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25526CE915E5790400FC1206 /* CorgiRun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25526CEC15E5790400FC1206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25526CED15E5790400FC1206 /* UIKit.framework */,
+				25526CEF15E5790400FC1206 /* Foundation.framework */,
+				25526CF115E5790400FC1206 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25526CF315E5790400FC1206 /* CorgiRun */ = {
+			isa = PBXGroup;
+			children = (
+				25526CFC15E5790400FC1206 /* AppDelegate.h */,
+				25526CFD15E5790400FC1206 /* AppDelegate.m */,
+				25526CF415E5790400FC1206 /* Supporting Files */,
+			);
+			path = CorgiRun;
+			sourceTree = "<group>";
+		};
+		25526CF415E5790400FC1206 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				25526CF515E5790400FC1206 /* CorgiRun-Info.plist */,
+				25526CF615E5790400FC1206 /* InfoPlist.strings */,
+				25526CF915E5790400FC1206 /* main.m */,
+				25526CFB15E5790400FC1206 /* CorgiRun-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25526CE815E5790400FC1206 /* CorgiRun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25526D0115E5790400FC1206 /* Build configuration list for PBXNativeTarget "CorgiRun" */;
+			buildPhases = (
+				25526CE515E5790400FC1206 /* Sources */,
+				25526CE615E5790400FC1206 /* Frameworks */,
+				25526CE715E5790400FC1206 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CorgiRun;
+			productName = CorgiRun;
+			productReference = 25526CE915E5790400FC1206 /* CorgiRun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25526CE015E5790400FC1206 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Ran Tao";
+			};
+			buildConfigurationList = 25526CE315E5790400FC1206 /* Build configuration list for PBXProject "CorgiRun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 25526CDE15E5790400FC1206;
+			productRefGroup = 25526CEA15E5790400FC1206 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25526CE815E5790400FC1206 /* CorgiRun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25526CE715E5790400FC1206 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25526CF815E5790400FC1206 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25526CE515E5790400FC1206 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25526CFA15E5790400FC1206 /* main.m in Sources */,
+				25526CFE15E5790400FC1206 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25526CF615E5790400FC1206 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25526CF715E5790400FC1206 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25526CFF15E5790400FC1206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		25526D0015E5790400FC1206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25526D0215E5790400FC1206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CorgiRun/CorgiRun-Prefix.pch";
+				INFOPLIST_FILE = "CorgiRun/CorgiRun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		25526D0315E5790400FC1206 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CorgiRun/CorgiRun-Prefix.pch";
+				INFOPLIST_FILE = "CorgiRun/CorgiRun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25526CE315E5790400FC1206 /* Build configuration list for PBXProject "CorgiRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25526CFF15E5790400FC1206 /* Debug */,
+				25526D0015E5790400FC1206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25526D0115E5790400FC1206 /* Build configuration list for PBXNativeTarget "CorgiRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25526D0215E5790400FC1206 /* Debug */,
+				25526D0315E5790400FC1206 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25526CE015E5790400FC1206 /* Project object */;
+}
