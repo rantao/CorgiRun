@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 #import "CorgiRunView.h"
 #import "Corgi.h"
 
@@ -18,10 +19,11 @@
 @property (nonatomic, strong) CALayer *background;
 @property (nonatomic, strong) CALayer *houseTop;
 @property (nonatomic, strong) CALayer *houseBottom;
-
+@property (nonatomic, strong) UITapGestureRecognizer *tap;
+@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 @end
 
-@implementation CorgiRunView
+@implementation CorgiRunView 
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,6 +36,16 @@
 - (void)awakeFromNib
 {
     //NSLog(@"eyes in the awake");
+    
+    //add sounds
+    NSString *music = [[NSBundle mainBundle] pathForResource:@"bark" ofType:@"wav"];
+    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
+    self.musicPlayer.delegate;
+    
+    self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(barkNow:)];
+    self.tap.numberOfTapsRequired = 2;
+    [self addGestureRecognizer:self.tap];
+    
     //set background to be its own CALayer
     self.background = [CALayer layer];
     self.background.bounds = CGRectMake(0.0, 0.0, self.bounds.size.width*4.0 , self.bounds.size.height*1.1);
@@ -69,9 +81,12 @@
 }
 
 
+-(void) barkNow:(UIGestureRecognizer*) gesture {
+    [self.musicPlayer play];
+}
+
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing corgi and make it move with touch
     
 }
 

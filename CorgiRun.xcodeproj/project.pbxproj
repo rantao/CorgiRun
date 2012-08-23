@@ -22,6 +22,8 @@
 		25526D1815E597E600FC1206 /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1715E597E600FC1206 /* grass.jpg */; };
 		25526D1B15E5C46400FC1206 /* house_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1915E5C46400FC1206 /* house_bottom.png */; };
 		25526D1C15E5C46400FC1206 /* house_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1A15E5C46400FC1206 /* house_top.png */; };
+		25526D1E15E5C98C00FC1206 /* bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1D15E5C98C00FC1206 /* bark.wav */; };
+		25526D2015E5C9CD00FC1206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526D1F15E5C9CD00FC1206 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		25526D1715E597E600FC1206 /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		25526D1915E5C46400FC1206 /* house_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house_bottom.png; sourceTree = "<group>"; };
 		25526D1A15E5C46400FC1206 /* house_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house_top.png; sourceTree = "<group>"; };
+		25526D1D15E5C98C00FC1206 /* bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bark.wav; sourceTree = "<group>"; };
+		25526D1F15E5C9CD00FC1206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25526D2015E5C9CD00FC1206 /* AVFoundation.framework in Frameworks */,
 				25526D1315E5869500FC1206 /* QuartzCore.framework in Frameworks */,
 				25526CEE15E5790400FC1206 /* UIKit.framework in Frameworks */,
 				25526CF015E5790400FC1206 /* Foundation.framework in Frameworks */,
@@ -67,6 +72,7 @@
 		25526CDE15E5790400FC1206 = {
 			isa = PBXGroup;
 			children = (
+				25526D1F15E5C9CD00FC1206 /* AVFoundation.framework */,
 				25526CF315E5790400FC1206 /* CorgiRun */,
 				25526CEC15E5790400FC1206 /* Frameworks */,
 				25526CEA15E5790400FC1206 /* Products */,
@@ -95,6 +101,7 @@
 		25526CF315E5790400FC1206 /* CorgiRun */ = {
 			isa = PBXGroup;
 			children = (
+				25526D1D15E5C98C00FC1206 /* bark.wav */,
 				25526D1715E597E600FC1206 /* grass.jpg */,
 				25526D1915E5C46400FC1206 /* house_bottom.png */,
 				25526D1A15E5C46400FC1206 /* house_top.png */,
@@ -181,6 +188,7 @@
 				25526D1815E597E600FC1206 /* grass.jpg in Resources */,
 				25526D1B15E5C46400FC1206 /* house_bottom.png in Resources */,
 				25526D1C15E5C46400FC1206 /* house_top.png in Resources */,
+				25526D1E15E5C98C00FC1206 /* bark.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
