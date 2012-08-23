@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Ran Tao. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
 #import "CorgiRunViewController.h"
 
@@ -17,6 +18,7 @@
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     self.window.rootViewController = [CorgiRunViewController new];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

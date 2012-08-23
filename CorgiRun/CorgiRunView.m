@@ -37,11 +37,7 @@
 {
     //NSLog(@"eyes in the awake");
     
-    //add sounds
-    NSString *music = [[NSBundle mainBundle] pathForResource:@"bark" ofType:@"wav"];
-    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
-    self.musicPlayer.delegate;
-    
+
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(barkNow:)];
     self.tap.numberOfTapsRequired = 2;
     [self addGestureRecognizer:self.tap];
@@ -82,6 +78,11 @@
 
 
 -(void) barkNow:(UIGestureRecognizer*) gesture {
+    //add sounds
+    NSString *music = [[NSBundle mainBundle] pathForResource:@"bark" ofType:@"mp3"];
+    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:music] error:NULL];
+    self.musicPlayer.delegate;
+    [self.musicPlayer prepareToPlay];
     [self.musicPlayer play];
 }
 

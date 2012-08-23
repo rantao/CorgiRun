@@ -24,6 +24,7 @@
 		25526D1C15E5C46400FC1206 /* house_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1A15E5C46400FC1206 /* house_top.png */; };
 		25526D1E15E5C98C00FC1206 /* bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 25526D1D15E5C98C00FC1206 /* bark.wav */; };
 		25526D2015E5C9CD00FC1206 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25526D1F15E5C9CD00FC1206 /* AVFoundation.framework */; };
+		25D459D215E5D7570057683A /* bark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25D459D115E5D7570057683A /* bark.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		25526D1A15E5C46400FC1206 /* house_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house_top.png; sourceTree = "<group>"; };
 		25526D1D15E5C98C00FC1206 /* bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bark.wav; sourceTree = "<group>"; };
 		25526D1F15E5C9CD00FC1206 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		25D459D115E5D7570057683A /* bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bark.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		25526CF315E5790400FC1206 /* CorgiRun */ = {
 			isa = PBXGroup;
 			children = (
+				25D459D115E5D7570057683A /* bark.mp3 */,
 				25526D1D15E5C98C00FC1206 /* bark.wav */,
 				25526D1715E597E600FC1206 /* grass.jpg */,
 				25526D1915E5C46400FC1206 /* house_bottom.png */,
@@ -189,6 +192,7 @@
 				25526D1B15E5C46400FC1206 /* house_bottom.png in Resources */,
 				25526D1C15E5C46400FC1206 /* house_top.png in Resources */,
 				25526D1E15E5C98C00FC1206 /* bark.wav in Resources */,
+				25D459D215E5D7570057683A /* bark.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +315,7 @@
 				25526D0315E5790400FC1206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
