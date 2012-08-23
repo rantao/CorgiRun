@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIImage *corgi;
 @property (nonatomic, strong) Corgi *corgiLayer;
 @property (nonatomic) BOOL isFacingRight;
+@property (nonatomic, strong) CALayer *background;
 @end
 
 @implementation CorgiRunView
@@ -29,14 +30,23 @@
 
 - (void)awakeFromNib
 {
-    NSLog(@"eyes in the awake");
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grass.jpg"]];
+    //NSLog(@"eyes in the awake");
+    //set background to be its own CALayer
+    self.background = [CALayer layer];
+    
+    self.background.bounds = CGRectMake(0.0, 0.0, self.bounds.size.width*4.0 , self.bounds.size.height*1.1);
+    
+    self.background.position = CGPointMake(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
+    self.background.zPosition = -1000.0;
+    self.background.contents = (__bridge id)([[UIImage imageNamed:[NSString stringWithFormat:@"grass.jpg"]] CGImage]);
+    
+    //self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grass.jpg"]];
     NSString *fileName = [NSString stringWithFormat:@"corgi.png"];
     self.corgi = [UIImage imageNamed:fileName];
     self.corgiLayer = [Corgi layer];
     self.corgiLayer.contents = (__bridge id)([self.corgi CGImage]);
-    //self.corgiLayer.backgroundColor = [[UIColor redColor] CGColor];
 
+    [self.layer addSublayer:self.background];
     [self.layer addSublayer:self.corgiLayer];
     [self setNeedsDisplay];
     
@@ -56,13 +66,34 @@
     return YES;
 }
 
+-(BOOL) isOnLeftSideOfScreen:(CGPoint) location {
+    if  (location.x < self.bounds.size.width/2.0){
+    return YES;
+    }
+    return NO;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // capture the location where the user starts touching the view
 
     self.currentLocation = [[touches anyObject] locationInView:self];
     
-    // NEED TO STILL FIX THIS PART TO MAKE CORGI FACE THE CORRECT WAY
+    //parallax background
+    if ([self isOnLeftSideOfScreen:self.currentLocation] && self.corgiLayer.position.x > self.currentLocation.x) {
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:2];
+        self.background.position = CGPointMake(self.bounds.origin.x +40.0, self.background.position.y);
+        [CATransaction commit];
+    } else if (![self isOnLeftSideOfScreen:self.currentLocation] && self.corgiLayer.position.x < self.currentLocation.x){
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:2];
+        self.background.position = CGPointMake(self.bounds.origin.x -40.0, self.background.position.y);
+        [CATransaction commit];
+    }
+
+    
+    //flip the corgi
     if (self.isFacingRight) {
         if ([self isMovingLeft:self.currentLocation]) {
             self.corgiLayer.transform = CATransform3DMakeRotation(0.0, 0.0, 1.0, 0.0);
@@ -81,8 +112,33 @@
 {
     // Grab the current point
     self.currentLocation = [[touches anyObject] locationInView:self];
-    [CATransaction begin];
     //[CATransaction setDisableActions:YES];
+    //parallax background
+    if ([self isOnLeftSideOfScreen:self.currentLocation] && self.corgiLayer.position.x > self.currentLocation.x) {
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:2];
+        self.background.position = CGPointMake(self.bounds.origin.x +40.0, self.background.position.y);
+        [CATransaction commit];
+    } else if (![self isOnLeftSideOfScreen:self.currentLocation] && self.corgiLayer.position.x < self.currentLocation.x){
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:2];
+        self.background.position = CGPointMake(self.bounds.origin.x -40.0, self.background.position.y);
+        [CATransaction commit];
+    }
+
+    // Update the background location each and everytime the user moves the Corgi :)
+//    UITouch *touch = [touches anyObject];
+//    CGPoint currentTouch = [touch locationInView:self];
+//    CGPoint lastTouch    = [touch previousLocationInView:self];
+//   
+//    // From these two pieces of information one (if one were so inclined) could get the distance between touch events.
+//    CGFloat deltaX = currentTouch.x - lastTouch.x;
+//        
+//    // Using this distance move the background a proportionate amount in the opposite direciton.
+//    self.background.position = CGPointMake(self.background.position.x );
+    
+    
+    
     if (self.isFacingRight) {
         if ([self isMovingLeft:self.currentLocation]) {
             self.corgiLayer.transform = CATransform3DMakeRotation(0.0, 0.0, 1.0, 0.0);
@@ -95,7 +151,6 @@
         }
     }
     self.corgiLayer.position = self.currentLocation;
-    [CATransaction commit];
     [self setNeedsDisplay];
 }
 
