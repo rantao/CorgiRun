@@ -16,6 +16,9 @@
 @property (nonatomic, strong) Corgi *corgiLayer;
 @property (nonatomic) BOOL isFacingRight;
 @property (nonatomic, strong) CALayer *background;
+@property (nonatomic, strong) CALayer *houseTop;
+@property (nonatomic, strong) CALayer *houseBottom;
+
 @end
 
 @implementation CorgiRunView
@@ -33,12 +36,23 @@
     //NSLog(@"eyes in the awake");
     //set background to be its own CALayer
     self.background = [CALayer layer];
-    
     self.background.bounds = CGRectMake(0.0, 0.0, self.bounds.size.width*4.0 , self.bounds.size.height*1.1);
-    
     self.background.position = CGPointMake(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
     self.background.zPosition = -1000.0;
     self.background.contents = (__bridge id)([[UIImage imageNamed:[NSString stringWithFormat:@"grass.jpg"]] CGImage]);
+    
+    self.houseBottom = [CALayer layer];
+    self.houseBottom.bounds = CGRectMake(0.0, 0.0, 200.0, 200.0 );
+    self.houseBottom.position = CGPointMake(60.0, self.bounds.size.height - 75);
+    self.houseBottom.zPosition = -999.0;
+    self.houseBottom.contents = (__bridge id)([[UIImage imageNamed:[NSString stringWithFormat:@"house_bottom.png"]] CGImage]);
+    
+    self.houseTop = [CALayer layer];
+    self.houseTop.bounds = CGRectMake(0.0, 0.0, 200.0, 200.0 );
+    self.houseTop.position = CGPointMake(60.0, self.bounds.size.height - 75);
+    self.houseTop.zPosition = 999.0;
+    self.houseTop.contents = (__bridge id)([[UIImage imageNamed:[NSString stringWithFormat:@"house_top.png"]] CGImage]);
+
     
     //self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grass.jpg"]];
     NSString *fileName = [NSString stringWithFormat:@"corgi.png"];
@@ -47,7 +61,9 @@
     self.corgiLayer.contents = (__bridge id)([self.corgi CGImage]);
 
     [self.layer addSublayer:self.background];
+    [self.layer addSublayer:self.houseBottom];
     [self.layer addSublayer:self.corgiLayer];
+    [self.layer addSublayer:self.houseTop];
     [self setNeedsDisplay];
     
 }
